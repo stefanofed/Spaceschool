@@ -11,7 +11,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using SpaceSchool;
 
 // Il modello di elemento per la pagina base è documentato all'indirizzo http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -20,28 +19,11 @@ namespace SpaceSchoolW8
     /// <summary>
     /// Pagina base che fornisce caratteristiche comuni alla maggior parte delle applicazioni.
     /// </summary>
-    public sealed partial class TeacherMain : SpaceSchoolW8.Common.LayoutAwarePage
+    public sealed partial class MissionControl : SpaceSchoolW8.Common.LayoutAwarePage
     {
-        public TeacherMain()
+        public MissionControl()
         {
             this.InitializeComponent();
-            App.g_class.Populate();
-            
-            ClassName.DataContext = App.g_class;
-            
-            CompleteList.ItemsSource = App.g_class._students;
-
-            for (int n = 0; n < (App.g_class._students.Count/4); n++)
-            {
-                Group dummy = new Group();
-                dummy._name = "GROUP " + n.ToString();
-                for (int k = 0; k<4; k++) dummy._gstudents.Add(App.g_class._students[n+k]);
-                App.g_class._groups.Add(dummy);
-            }
-
-
-
-
         }
 
         /// <summary>
@@ -65,24 +47,6 @@ namespace SpaceSchoolW8
         /// <param name="pageState">Dizionario vuoto da popolare con uno stato serializzabile.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
-        }
-
-        private void EpisodeList_ItemClick_1(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            GroupList.ItemsSource = App.g_class._groups;
-
-
-            //App.g_class._groups.Add(
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MissionControl));
         }
     }
 }

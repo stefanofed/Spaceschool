@@ -122,7 +122,8 @@
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal">
                 <Button Content=" + ADD GROUP" Margin="30,0,30,0" FontSize="24" Click="Button_Click"/>
-                <Button Content="ASSIGN MISSION" Margin="30,0,30,0" FontSize="24" Click="Button_Click"/>
+                <Button Content="ASSIGN MISSION" Margin="30,0,30,0" FontSize="24" />
+                <Button Content="MISSION CONTROL" Margin="30,0,30,0" FontSize="24" Click="Button_Click_1"/>
             </StackPanel>
         </Grid>
 

@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using SpaceSchool;
 
 // Il modello di elemento per la pagina base è documentato all'indirizzo http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -24,6 +25,9 @@ namespace SpaceSchoolW8
         public BuildMain()
         {
             this.InitializeComponent();
+
+            Rocket _rocket = new Rocket();
+
         }
 
         /// <summary>
