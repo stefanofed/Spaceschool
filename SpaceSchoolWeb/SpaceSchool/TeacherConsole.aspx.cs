@@ -16,7 +16,7 @@ namespace SpaceSchool
         {
             _class.Populate();
             StudentList.DataSource = _class._students;
-
+            
         }
     }
 }
